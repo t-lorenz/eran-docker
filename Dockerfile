@@ -1,3 +1,6 @@
+# Allow control over the ERAN version which is being built
+ARG eran_version=master
+
 FROM --platform=linux/amd64 debian:latest
 
 LABEL org.opencontainers.image.authors="tobias.lorenz@cispa.de"
@@ -23,7 +26,8 @@ RUN wget -nv https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.
 ENV PATH="/root/miniconda3/bin:$PATH"
 
 # clone ERAN repository
-RUN git clone https://github.com/eth-sri/ERAN.git
+RUN git clone https://github.com/eth-sri/ERAN.git \
+    && git checkout $eran_version
 
 WORKDIR /ERAN
 
