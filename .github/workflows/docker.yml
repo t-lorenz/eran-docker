@@ -31,4 +31,4 @@ jobs:
         with:
           push: true
           build-args: eran_version=${{ env.ERAN_VERSION }}
-          tags: lort/eran:latest,lort/eran:{{ env.ERAN_VERSION }}
+          tags: lort/eran:latest,lort/eran:${{ env.ERAN_VERSION }}
