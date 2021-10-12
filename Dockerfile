@@ -27,7 +27,7 @@ ENV PATH="/root/miniconda3/bin:$PATH"
 
 # clone ERAN repository
 RUN git clone https://github.com/eth-sri/ERAN.git \
-    && git checkout $eran_version
+    && git checkout ${eran_version}
 
 WORKDIR /ERAN
 
