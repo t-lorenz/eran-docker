@@ -6,7 +6,7 @@ on:
       - 'master'
 
 env:
-  ERAN_VERSION: 'd60cf57'
+  ERAN_VERSION: '973e3b5'
 
 jobs:
   docker:
